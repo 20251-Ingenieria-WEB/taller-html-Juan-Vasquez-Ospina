@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex de Anomalías</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <div class="pokedex">
+    
+    <!-- Encabezado con luz, título y pokébola decorativa -->
+    <div class="header">
+      <div class="light"></div>
+      <div class="title">
+        <h1>POKÉDEX</h1>
+      </div>
+      <div class="pokeball"></div>
+    </div>
+
+    <!-- Pantalla principal donde se muestra la información del Pokémon -->
+    <div class="screen" id="pokeinfo"></div>
+
+    <div class="bottom">
+      
+      <!-- Barra de búsqueda para ingresar el nombre del Pokémon -->
+      <div class="info-bar">
+        <input type="text" id="busqueda" class="name" placeholder="Ingresa un Pokémon" />
+      </div>
+
+      <!-- Controles de navegación y botones -->
+      <div class="controls">
+
+        <!-- Flechas direccionales -->
+        <div class="dpad">
+          <div class="arrow up">▲</div>
+          <div class="arrow left">◀</div>
+          <div class="arrow right">▶</div>
+          <div class="arrow down">▼</div>
+        </div>
+
+        <!-- Área de descripción del Pokémon -->
+        <div class="description"></div>
+
+        <!-- Botones de acción -->
+        <div class="buttons">
+          <div class="btn red" id="boton-limpiar">X</div>
+          <div class="btn green" id="boton-buscar">✔</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace al script principal de la aplicación -->
+  <script src="js/app.js"></script>
+</body>
+</html>

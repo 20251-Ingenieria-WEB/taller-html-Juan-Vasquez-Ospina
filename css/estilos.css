@@ -1,0 +1,359 @@
+/* =====================
+   ESTILO GLOBAL
+===================== */
+
+body {
+  background-image: url("../imagenes/pokébola.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: monospace;
+}
+
+/* =====================
+   CONTENEDOR PRINCIPAL
+===================== */
+
+.pokedex {
+  background: #f33434;
+  border: 5px solid black;
+  border-radius: 20px;
+  padding: 15px;
+  width: 400px;
+  box-shadow: 0 0 10px black;
+}
+
+/* =====================
+   CABECERA
+===================== */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.light {
+  width: 50px;
+  height: 50px;
+  background: cyan;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+}
+
+.pokeball {
+  width: 45px;
+  height: 45px;
+  background-image: url("../imagenes/pokeball.png");
+  background-size: cover;
+}
+
+/* =====================
+   PANTALLA DE INFORMACIÓN
+===================== */
+
+.screen {
+  background: white;
+  border: 3px solid black;
+  height: 250px;
+  margin: 15px 0;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.75em;
+  box-sizing: border-box;
+}
+
+.poke-card {
+  text-align: center;
+  color: #333;
+  width: 100%;
+}
+
+.poke-card h2 {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* =====================
+   IMÁGENES DEL POKÉMON
+===================== */
+
+.poke-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -10px;
+}
+
+.poke-images img {
+  width: 100px;
+  height: auto;
+  margin-top: -10px;
+}
+
+/* =====================
+   INFORMACIÓN GENERAL
+===================== */
+
+.poke-info-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 2px;
+  font-size: 0.80em;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.poke-info-row div {
+  text-align: center;
+  flex: 1;
+}
+
+/* =====================
+   ESTADÍSTICAS
+===================== */
+
+.stats {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.stat {
+  margin: 3px 0;
+  font-size: 0.75em;
+}
+
+.stat-bar {
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.stat-fill {
+  background: #4CAF50;
+  height: 100%;
+  color: white;
+  font-size: 0.6em;
+  padding-left: 4px;
+  line-height: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+/* =====================
+   PARTE INFERIOR (controles y descripción)
+===================== */
+
+.bottom {
+  background: #333;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.info-bar {
+  background: #82b543;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.info-bar input.name {
+  background: #82b543;
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+}
+
+.info-bar input.name::placeholder {
+  color: white;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* =====================
+   FLECHAS DE DIRECCIÓN
+===================== */
+
+.dpad {
+  display: grid;
+  grid-template-areas:
+    ". up ."
+    "left . right"
+    ". down .";
+  gap: 5px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  background: #444;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.arrow.up { grid-area: up; }
+.arrow.left { grid-area: left; }
+.arrow.right { grid-area: right; }
+.arrow.down { grid-area: down; }
+
+/* =====================
+   DESCRIPCIÓN DEL POKÉMON
+===================== */
+
+.description {
+  background: #82b543;
+  padding: 15px;
+  font-size: 10px;
+  line-height: 1.3;
+  border-radius: 5px;
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* =====================
+   BOTONES DE ACCIÓN
+===================== */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid black;
+}
+
+.btn.red {
+  background: #e74c3c;
+}
+
+.btn.green {
+  background: #2ecc71;
+}
+
+/* =====================
+   RESPONSIVE - Celulares pequeños
+===================== */
+
+@media screen and (max-width: 480px) {
+  .pokedex {
+    width: 95%;
+    padding: 10px;
+    border-width: 3px;
+  }
+
+  .screen {
+    height: auto;
+    font-size: 0.65em;
+    padding: 8px;
+  }
+
+  .poke-images img {
+    width: 70px;
+  }
+
+  .poke-card h2 {
+    font-size: 0.9em;
+  }
+
+  .poke-info-row {
+    font-size: 0.7em;
+    gap: 4px;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 11px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .info-bar input.name {
+    font-size: 0.9em;
+    padding: 5px;
+  }
+
+  .dpad .arrow,
+  .btn {
+    width: 24px;
+    height: 24px;
+    font-size: 0.75em;
+    line-height: 24px;
+  }
+}
+
+/* =====================
+   RESPONSIVE - Tablets y celulares grandes
+===================== */
+
+@media screen and (max-width: 768px) {
+  .pokedex {
+    width: 90%;
+  }
+
+  .poke-images img {
+    width: 90px;
+  }
+
+  .description {
+    width: 100%;
+    font-size: 12px;
+    height: auto;
+  }
+
+  .info-bar input.name {
+    font-size: 1em;
+  }
+
+  .dpad .arrow,
+  .btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85em;
+    line-height: 28px;
+  }
+}
